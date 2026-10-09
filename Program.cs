@@ -126,3 +126,39 @@ while (true)
     Console.WriteLine("Неверный пароль, попробуйте снова");
     failedAttempts++;
 }
+
+
+
+string answer;
+do {
+    Console.Write("Введите дату посещения (например, 01.09): ");
+    string date = Console.ReadLine();
+    Console.WriteLine($"Запись добавлена: {date}");
+
+    Console.Write("Добавить ещё одну запись? (да/нет): ");
+    answer = Console.ReadLine();
+} while (answer == "да");
+Console.WriteLine("Дневник сохранён");
+
+
+
+int N = 7;
+for (int i = 1; i <= 10; i++)
+{
+    Console.WriteLine($"{N} * {i} = {N * i}");
+}
+
+
+
+int count = 0;
+string name;
+do
+{
+    Console.Write("Введите имя ученика (или 'конец' для завершения): ");
+    name = Console.ReadLine();
+    if (name != "конец")
+    {
+        count++;
+    }
+} while (name != "конец");
+Console.WriteLine($"Количество введённых имён: {count}");
